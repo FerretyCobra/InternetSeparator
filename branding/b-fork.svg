@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- One stem forks into two lanes at 30° from vertical, each ending in its own endpoint -->
+  <g fill="none" stroke="#000" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 222 V150 L76 60"/>
+    <path d="M128 150 L180 60"/>
+  </g>
+</svg>

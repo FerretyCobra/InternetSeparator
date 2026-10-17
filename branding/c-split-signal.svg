@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- A signal glyph split down the middle; the right half steps up one level: same idea of internet, two separate links -->
+  <g fill="none" stroke="#000" stroke-width="28" stroke-linecap="round">
+    <path d="M91.2 168.8 A52 52 0 0 1 108 151.3"/>
+    <path d="M57.3 134.9 A100 100 0 0 1 108 102.0"/>
+    <path d="M23.4 101.0 A148 148 0 0 1 108 53.4"/>
+    <g transform="translate(0 -28)">
+      <path d="M164.8 168.8 A52 52 0 0 0 148 151.3"/>
+      <path d="M198.7 134.9 A100 100 0 0 0 148 102.0"/>
+      <path d="M232.6 101.0 A148 148 0 0 0 148 53.4"/>
+    </g>
+  </g>
+  <path d="M120 186 A20 20 0 0 0 120 226 Z"/>
+  <path d="M136 158 A20 20 0 0 1 136 198 Z"/>
+</svg>

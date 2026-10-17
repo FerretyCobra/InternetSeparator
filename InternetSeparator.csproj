@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <!-- only for the tray icon (NotifyIcon); WPF has none -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- TUN mode needs admin -->
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- exe icon; the tray icon is extracted from the exe, so this covers it too -->
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Company>FerretyCobra</Company>
+    <Product>Internet Separator</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="app.ico" />
+    <Resource Include="logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="mihomo\mihomo.exe" Condition="Exists('mihomo\mihomo.exe')" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- keep WinForms names (Button, CheckBox, Application...) from clashing with WPF -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+  </ItemGroup>
+
+</Project>

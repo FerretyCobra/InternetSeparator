@@ -1,0 +1,68 @@
+<Window x:Class="InternetSeparator.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Internet Separator" Width="520" SizeToContent="Height" FontSize="13"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Window.Resources>
+        <Style x:Key="Heading" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,16,0,6"/>
+        </Style>
+        <Style x:Key="Bullet" TargetType="TextBlock">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,0,0,4"/>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Margin="24">
+        <!-- Header: logo, name, version, tagline -->
+        <DockPanel>
+            <Image Source="logo.png" Width="72" Height="72" Margin="0,0,16,0" DockPanel.Dock="Left"
+                   RenderOptions.BitmapScalingMode="HighQuality"/>
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Internet Separator" FontSize="22" FontWeight="SemiBold"/>
+                <TextBlock x:Name="VersionText" Foreground="Gray"/>
+                <TextBlock Text="Every app on the connection you choose, at full speed." Margin="0,4,0,0"/>
+            </StackPanel>
+        </DockPanel>
+
+        <TextBlock TextWrapping="Wrap" Margin="0,16,0,0">
+            Connect Wi-Fi, Ethernet and USB tethering at the same time, then decide which app uses which.
+            Each connection is its own pipe, so a big game download on your phone's data never slows down
+            the browser on your Wi-Fi.
+        </TextBlock>
+
+        <TextBlock Text="How it works" Style="{StaticResource Heading}"/>
+        <TextBlock Style="{StaticResource Bullet}">• Every connected network gets a column, showing its real speed and whether it has internet (✓ / ⚠).</TextBlock>
+        <TextBlock Style="{StaticResource Bullet}">• Tick apps and press ⇄ to move them. Pinned apps (📌) keep their connection across restarts.</TextBlock>
+        <TextBlock Style="{StaticResource Bullet}">• Everything else uses the default connection picked at the top.</TextBlock>
+        <TextBlock Style="{StaticResource Bullet}">• Unplug the phone or lose Wi-Fi and pinned apps wait; they move back when it returns.</TextBlock>
+
+        <TextBlock Text="Tips" Style="{StaticResource Heading}"/>
+        <TextBlock Style="{StaticResource Bullet}">• Turn on "Start with Windows" so the app starts before your other apps and routes them from the first connection.</TextBlock>
+        <TextBlock Style="{StaticResource Bullet}">• "⚠ restart to route" means the app connected before Internet Separator started. Restart that app once.</TextBlock>
+        <TextBlock Style="{StaticResource Bullet}">• Closing the window keeps routing running in the tray. Right-click the tray icon → Exit to quit.</TextBlock>
+
+        <TextBlock Text="Made by" Style="{StaticResource Heading}"/>
+        <TextBlock>
+            <Run Text="FerretyCobra" FontWeight="SemiBold"/>
+            <Run Text="  ·  "/>
+            <Hyperlink NavigateUri="https://github.com/FerretyCobra" RequestNavigate="Link_RequestNavigate">github.com/FerretyCobra</Hyperlink>
+        </TextBlock>
+
+        <TextBlock Text="Credits" Style="{StaticResource Heading}"/>
+        <TextBlock TextWrapping="Wrap">
+            Traffic routing is powered by
+            <Hyperlink NavigateUri="https://github.com/MetaCubeX/mihomo" RequestNavigate="Link_RequestNavigate">mihomo</Hyperlink>
+            by MetaCubeX, licensed under the
+            <Hyperlink NavigateUri="https://github.com/MetaCubeX/mihomo/blob/main/LICENSE" RequestNavigate="Link_RequestNavigate">MIT license</Hyperlink>.
+        </TextBlock>
+
+        <DockPanel Margin="0,24,0,0" LastChildFill="False">
+            <TextBlock x:Name="CopyrightText" Foreground="Gray" VerticalAlignment="Center"/>
+            <Button Content="Close" DockPanel.Dock="Right" Padding="20,4" IsCancel="True" IsDefault="True"/>
+            <Button Content="Open data folder" DockPanel.Dock="Right" Padding="12,4" Margin="0,0,8,0"
+                    Click="DataFolder_Click" ToolTip="Saved pins, settings and the engine log"/>
+        </DockPanel>
+    </StackPanel>
+</Window>

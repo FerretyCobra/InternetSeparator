@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- A disc cut along a 45° gap; the halves slide apart along the cut: one link, two independent paths -->
+  <g transform="rotate(45 128 128)" fill="#000">
+    <path d="M116 33.2 A96 96 0 0 0 116 222.8 Z" transform="translate(0 -14)"/>
+    <path d="M140 33.2 A96 96 0 0 1 140 222.8 Z" transform="translate(0 14)"/>
+  </g>
+</svg>
