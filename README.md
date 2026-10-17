@@ -47,7 +47,7 @@ You don't need to install anything else; .NET is included in the exe.
 1. Connect your networks (Wi-Fi, Ethernet cable, phone via USB tethering). Each one appears as a column.
 2. Pick the **Default for other apps** connection at the top.
 3. Tick one or more apps and click **⇄** between two columns to move them across.
-4. To send an app back to the default, tick it and click **Follow default**.
+4. To send an app back to the default, tick it and click **📌 Unpin**. Apps you added with "Add app…" are also removed from the list.
 
 ### Tips
 

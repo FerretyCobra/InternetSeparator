@@ -17,8 +17,8 @@
 
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,10,0,0">
             <TextBlock Text="Tick apps, then click ⇄ to move them to the other side." VerticalAlignment="Center" Foreground="Gray"/>
-            <Button Content="Follow default" Click="Unpin_Click" Padding="12,4" Margin="12,0,0,0"
-                    ToolTip="Unpin the ticked apps; they use the default connection"/>
+            <Button Content="📌 Unpin" Click="Unpin_Click" Padding="12,4" Margin="12,0,0,0"
+                    ToolTip="Unpin the ticked apps: they go back to the default connection, and apps added with &quot;Add app…&quot; are removed from the list"/>
         </StackPanel>
 
         <ItemsControl x:Name="Columns">

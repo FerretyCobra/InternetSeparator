@@ -282,8 +282,8 @@ public partial class MainWindow : Window
     {
         if (ticked.Count == 0) { Status.Text = "Tick apps first."; return; }
         var apps = ticked.ToList();
-        foreach (var exe in apps) s.Rules.Remove(exe);
-        await ApplyRules(apps, $"{apps.Count} app(s) follow the default connection");
+        foreach (var exe in apps) { s.Rules.Remove(exe); s.Apps.Remove(exe); }
+        await ApplyRules(apps, $"Unpinned {apps.Count} app(s); they follow the default connection");
     }
 
     async Task ApplyRules(List<string> exes, string msg)
