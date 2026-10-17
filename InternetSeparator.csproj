@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="mihomo\mihomo.exe" Condition="Exists('mihomo\mihomo.exe')" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="mihomo\mihomo.exe" Condition="Exists('mihomo\mihomo.exe')" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
 
   <ItemGroup>
